@@ -1,0 +1,651 @@
+.contact-container {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    background-image: url('../assets/contactsec.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40rem;
+    text-align: center;
+    font-family: auto;
+
+    .sub-contact-container{
+        background-color: white;
+    width: 24rem;
+    padding: 2rem;
+    margin-left: 4rem;
+    margin-top: 6%;
+    box-shadow: 0 0 7px 2px #b0b0b0;
+
+  
+    h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #333;
+    }
+  
+    p {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #777;
+      text-align: left;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      input,
+      textarea {
+        margin-bottom: 10px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    transition: border-color 0.3s;
+    border-bottom: 1px solid #4545459c;
+  
+        &:focus {
+          border-color: #333;
+        }
+      }
+  
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+  
+      button {
+        padding: 5px 25px;
+        font-size: 16px;
+        color: white;
+        background-color: #000;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #333;
+        }
+      }
+    }
+}
+  }
+
+  @media only screen and (max-width: 2600px) {
+    .contact-container {
+      background-color: white;
+      padding: 40px;
+      text-align: center;
+      background-image: url('../assets/contactsec.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 56rem;
+      text-align: center;
+      font-family: auto;
+
+      h1{
+        font-size: xxx-large;
+        color: white;
+        font-weight: 700;
+        text-align: left;
+        margin: 4rem 5.5rem 3rem;
+        font-family: cursive;
+      }
+  
+      .sub-contact-container{
+        background-color: white;
+        width: 33rem;
+        padding: 5rem 3rem;
+        margin-left: 4rem;
+        box-shadow: 0 0 7px 2px #b0b0b0;
+        height: 34rem;
+        margin-top: auto;
+  
+    
+      h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: #333;
+      }
+    
+      p {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #777;
+        text-align: left;
+      }
+    
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        input,
+        textarea {
+          margin-bottom: 10px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 400px;
+      outline: none;
+      transition: border-color 0.3s;
+      border-bottom: 1px solid #4545459c;
+    
+          &:focus {
+            border-color: #333;
+          }
+        }
+    
+        textarea {
+          resize: none;
+          height: 100px;
+        }
+    
+        button {
+          padding: 5px 25px;
+          font-size: 16px;
+          color: white;
+          background-color: #000;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s;
+    
+          &:hover {
+            background-color: #333;
+          }
+        }
+        .submit-message {
+          margin-top: 10px;
+          font-size: 16px;
+          font-weight: 500;
+          
+          &.success {
+            color: green;
+          }
+        
+          &.error {
+            color: red;
+          }
+        }
+        
+      }
+  }
+    }
+  }
+
+  @media only screen and (max-width: 1450px) {
+    .contact-container {
+      background-color: white;
+      padding: 40px;
+      text-align: center;
+      background-image: url('../assets/contactsec.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 40rem;
+      text-align: center;
+      font-family: auto;
+  
+      .sub-contact-container{
+          background-color: white;
+      width: 24rem;
+      padding: 2rem;
+      margin-left: 4rem;
+      margin-top: 6%;
+      box-shadow: 0 0 7px 2px #b0b0b0;
+  
+    
+      h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: #333;
+      }
+    
+      p {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #777;
+        text-align: left;
+      }
+    
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        input,
+        textarea {
+          margin-bottom: 10px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 400px;
+      outline: none;
+      transition: border-color 0.3s;
+      border-bottom: 1px solid #4545459c;
+    
+          &:focus {
+            border-color: #333;
+          }
+        }
+    
+        textarea {
+          resize: none;
+          height: 100px;
+        }
+    
+        button {
+          padding: 5px 25px;
+          font-size: 16px;
+          color: white;
+          background-color: #000;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s;
+    
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+  }
+    }
+  }
+
+  @media only screen and (max-width: 1030px) {
+    .contact-container {
+      background-color: white;
+      padding: 40px;
+      text-align: center;
+      background-image: url('../assets/contactsec.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 40rem;
+      text-align: center;
+      font-family: auto;
+  
+      .sub-contact-container{
+          background-color: white;
+      width: 24rem;
+      padding: 2rem;
+      margin-left: 4rem;
+      margin-top: 6%;
+      box-shadow: 0 0 7px 2px #b0b0b0;
+  
+    
+      h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: #333;
+      }
+    
+      p {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #777;
+        text-align: left;
+      }
+    
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        input,
+        textarea {
+          margin-bottom: 10px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 400px;
+      outline: none;
+      transition: border-color 0.3s;
+      border-bottom: 1px solid #4545459c;
+    
+          &:focus {
+            border-color: #333;
+          }
+        }
+    
+        textarea {
+          resize: none;
+          height: 100px;
+        }
+    
+        button {
+          padding: 5px 25px;
+          font-size: 16px;
+          color: white;
+          background-color: #000;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s;
+    
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+  }
+    }
+  }
+
+  @media only screen and (max-width: 770px) {
+    .contact-container {
+      background-color: white;
+      padding: 55px;
+      text-align: center;
+      background-image: url('../assets/contactsec.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 28rem;
+      text-align: center;
+      font-family: auto;
+  
+      .sub-contact-container{
+        background-color: white;
+        width: 20rem;
+        padding: 24px;
+        margin-left: 0;
+        margin-top: 0;
+        box-shadow: 0 0 7px 2px #b0b0b0;
+  
+    
+      h2 {
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #333;
+    
+      }
+    
+      p {
+        margin-bottom: 16px;
+        font-size: 12px;
+        color: #777;
+        text-align: center;
+    
+      }
+    
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        input,
+        textarea {
+          margin-bottom: 7px;
+          font-size: 12px;
+      width: 100%;
+      max-width: 400px;
+      outline: none;
+      transition: border-color 0.3s;
+      border-bottom: 1px solid #4545459c;
+    
+          &:focus {
+            border-color: #333;
+          }
+        }
+    
+        textarea {
+          resize: none;
+          height: 80px;
+        }
+    
+        button {
+          padding: 5px 22px;
+        font-size: 11px;
+        color: white;
+        background-color: #000;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    
+    
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+  }
+    }
+  }
+
+
+  @media only screen and (max-width: 630px) {
+    .contact-container {
+      background-color: white;
+      padding: 55px;
+      text-align: center;
+      background-image: url('../assets/contactsec.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 28rem;
+      text-align: center;
+      font-family: auto;
+  
+      .sub-contact-container{
+        background-color: white;
+        width: 20rem;
+        padding: 24px;
+        margin-left: 19%;
+        margin-top: 0;
+        box-shadow: 0 0 7px 2px #b0b0b0;
+  
+    
+      h2 {
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #333;
+    
+      }
+    
+      p {
+        margin-bottom: 16px;
+        font-size: 12px;
+        color: #777;
+        text-align: center;
+    
+      }
+    
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        input,
+        textarea {
+          margin-bottom: 7px;
+          font-size: 12px;
+      width: 100%;
+      max-width: 400px;
+      outline: none;
+      transition: border-color 0.3s;
+      border-bottom: 1px solid #4545459c;
+    
+          &:focus {
+            border-color: #333;
+          }
+        }
+    
+        textarea {
+          resize: none;
+          height: 80px;
+        }
+    
+        button {
+          padding: 5px 22px;
+        font-size: 11px;
+        color: white;
+        background-color: #000;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    
+    
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+  }
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    .contact-container {
+      background-color: white;
+      padding: 55px;
+      text-align: center;
+      background-image: url('../assets/contactsec.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 27rem;
+      text-align: center;
+      font-family: auto;
+  
+      .sub-contact-container{
+        background-color: white;
+        width: 20rem;
+        padding: 24px;
+        margin-left: 0;
+        margin-top: 0;
+        box-shadow: 0 0 7px 2px #b0b0b0;
+  
+    
+      h2 {
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #333;
+    
+      }
+    
+      p {
+        margin-bottom: 16px;
+        font-size: 12px;
+        color: #777;
+        text-align: center;
+    
+      }
+    
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        input,
+        textarea {
+          margin-bottom: 7px;
+          font-size: 12px;
+      width: 100%;
+      max-width: 400px;
+      outline: none;
+      transition: border-color 0.3s;
+      border-bottom: 1px solid #4545459c;
+    
+          &:focus {
+            border-color: #333;
+          }
+        }
+    
+        textarea {
+          resize: none;
+          height: 80px;
+        }
+    
+        button {
+          padding: 5px 22px;
+        font-size: 11px;
+        color: white;
+        background-color: #000;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    
+    
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+  }
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    .contact-container {
+      background-color: white;
+      padding: 40px;
+      text-align: center;
+      background-image: url('../assets/contactsec.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 26rem;
+      text-align: center;
+      font-family: auto;
+  
+      .sub-contact-container{
+        background-color: white;
+        width: 19rem;
+        padding: 24px;
+        margin-left: 0;
+        margin-top: 0;
+        box-shadow: 0 0 7px 2px #b0b0b0;
+  
+    
+      h2 {
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #333;
+    
+      }
+    
+      p {
+        margin-bottom: 8px;
+        font-size: 12px;
+        color: #777;
+        text-align: center;
+    
+      }
+    
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        input,
+        textarea {
+          margin-bottom: 7px;
+          font-size: 12px;
+      width: 100%;
+      max-width: 400px;
+      outline: none;
+      transition: border-color 0.3s;
+      border-bottom: 1px solid #4545459c;
+    
+          &:focus {
+            border-color: #333;
+          }
+        }
+    
+        textarea {
+          resize: none;
+          height: 80px;
+        }
+    
+        button {
+          padding: 5px 22px;
+        font-size: 11px;
+        color: white;
+        background-color: #000;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    
+    
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+  }
+    }
+  }
+  

@@ -1,0 +1,12 @@
+# Ignore environment files
+.env
+Backend/.env
+Frontend/.env
+Frontend/src/.env
+
+# Node modules
+node_modules
+
+# Build output
+build
+dist

@@ -1,0 +1,331 @@
+.base-container {
+    .base-navbar {
+        min-height: 7rem;
+        padding-top: 1.25rem;
+
+        .base-inner-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 5rem;
+
+            img {
+                width: 10%;
+            }
+
+            .base-items {
+                width: 60%;
+
+                .base-ul {
+                    display: flex;
+
+                    .base-list-component {
+                        margin: 1rem 2.5rem;
+                    }
+                }
+            }
+
+            .nav-logo {
+                width: 9rem;
+                cursor: pointer;
+                z-index: 8001;
+            }
+        }
+    }
+
+    
+}
+@media only screen and (max-width: 2600px) {
+    .base-header-container {
+        .top-header {
+            background-color: #e0f4ff; // light blue
+            font-size: 0.9rem;
+            padding: 0.3rem 0;
+    
+            .top-header-content {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 1rem;
+                padding: 0 50px;
+    
+                .auth-links a {
+                    margin-left: 1rem;
+                    text-decoration: none;
+                    color: #333;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .username-dropdown-wrapper {
+                    position: relative;
+                
+    
+                .username-dropdown {
+                    position: relative;
+                    cursor: pointer;
+    
+                    .dropdown-menu {
+                        position: absolute;
+                        top: 1.5rem;
+                        right: 0;
+                        background-color: white;
+                        border-radius: 6px;
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                        z-index: 1000;
+                        padding: 0.5rem 0;
+                        min-width: 150px;
+    
+                        li {
+                            padding: 0.5rem 1rem;
+    
+                            a, button {
+                                all: unset;
+                                cursor: pointer;
+                                color: #333;
+                                display: block;
+                                width: 100%;
+    
+                                &:hover {
+                                    background-color: #f0f0f0;
+                                }
+                            }
+                        }}
+                    }
+                }
+            }
+        }
+    
+        .main-header {
+            background-color: white;
+            padding: 0.8rem 4rem;
+            border-bottom: 1px solid #e0e0e0;
+    
+            .main-header-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            
+                .left-logo {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-start;
+            
+                    .nav-logo {
+                        width: 8rem;
+                        cursor: pointer;
+                    }
+                }
+            
+                .center-area {
+                    flex: 3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1.5rem;
+            
+                    .center-links {
+                        display: flex;
+                        gap: 2rem;
+            
+                        a {
+                            font-size: 1rem;
+                            text-decoration: none;
+                            color: #333;
+            
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+            
+                    .search-bar {
+                        display: flex;
+                        align-items: center;
+                        max-width: 300px;
+                        width: 100%;
+                    }
+                }
+            
+                .right-cart {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }            
+    }
+    
+    
+  }
+  
+
+@media only screen and (max-width: 1450px) {
+    .base-container {
+        .base-navbar {
+            min-height: 7rem;
+            padding-top: 1.25rem;
+    
+            .base-inner-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                min-height: 5rem;
+    
+                .base-items {
+                    width: 60%;
+                    
+    
+                    .base-ul {
+                        display: flex;
+                        margin-left: -1rem;
+    
+    
+                        .base-list-component {
+                            margin: 1rem 2.5rem;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+    
+                .nav-logo {
+                    width: 9rem;
+                    cursor: pointer;
+                    z-index: 8001;
+                }
+            }
+        }
+    
+        
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .base-container {
+        .base-navbar {
+            min-height: 7rem;
+            padding-top: 1.25rem;
+    
+            .base-inner-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                min-height: 5rem;
+    
+                .base-items {
+                    width: 60%;
+    
+                    .base-ul {
+                        display: flex;
+    
+                        .base-list-component {
+                            margin: 1rem 1.5rem;
+                            font-size: 1.2rem;
+                            padding-top: 5px;
+                        }
+                    }
+                }
+    
+                .nav-logo {
+                    width: 9rem;
+                    cursor: pointer;
+                    z-index: 8001;
+                }
+            }
+        }
+    
+        
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .base-container {
+        .base-navbar {
+            .base-inner-container {
+                .nav-logo {
+                    width: 7rem;
+                }
+
+                .base-items{
+                    .base-ul{
+                        .base-list-component{
+                            margin: 1rem 1.5rem;
+                            font-size:small;
+
+                        }
+                    }
+                }
+            }
+        }
+                
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .base-container {
+        .base-navbar {
+            .base-inner-container {
+                .nav-logo {
+                    width: 7rem;
+                }
+
+                .base-items{
+                    .base-ul{
+                        .base-list-component{
+                            margin: 1rem 1.5rem;
+                            font-size: smaller;
+                        }
+                    }
+                }
+            }
+        }
+                
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .base-container {
+        .base-navbar {
+            .base-inner-container {
+                .nav-logo {
+                    width: 7rem;
+                }
+
+                .base-items{
+                    .base-ul{
+                        margin-left: 3.5rem;
+                        .base-list-component{
+                            margin: 1rem 0.5rem;
+                            font-size: smaller;
+                        }
+                    }
+                }
+            }
+        }
+                
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .base-container {
+        .base-navbar {
+            .base-inner-container {
+                .nav-logo {
+                    width: 13rem;
+                }
+
+                .base-items{
+                    .base-ul{
+                        margin-left: 2.5rem;
+                        .base-list-component{
+                            margin: 1rem 0.5rem;
+                            font-size: smaller;
+                        }
+                    }
+                }
+            }
+        }
+                
+    }
+}

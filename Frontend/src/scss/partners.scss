@@ -1,0 +1,411 @@
+#partners {
+    .bgimg {
+        background-image: url("../assets/sectionbg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 522px;
+    }
+
+    .partners-upper-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 2rem 0 2rem;
+    
+    
+
+    .partners-bottom-container {
+        margin-top: 10rem;
+        padding-bottom: 4rem;
+        height: 100%;
+        margin-left: 65%;
+        text-align: right;
+
+        .title {
+            font-weight: 900;
+            font-size: 3.3rem;
+            line-height: 3rem;
+            color: black;
+            font-family: initial;
+        }
+
+        .paragraph {
+            margin-top: 1.25rem;
+            font-size: medium;
+            line-height: 19px;
+            font-family: auto;
+            padding-left: 10%;
+        }
+
+        .button {
+            background-color: black;
+            margin: 11px 0 9px;
+            padding: 6px 14px;
+            font-family: auto;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+    }}
+}
+
+@media only screen and (max-width: 2600px) {
+
+    #partners {
+        .bgimg {
+            background-image: url("../assets/sectionbg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 42rem;
+            padding: 2rem 3rem 2rem 2rem;
+        }
+    
+        .partners-upper-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 2rem 0 2rem;
+        
+        
+    
+        .partners-bottom-container {
+            padding-bottom: 4rem;
+            height: 100%;
+            text-align: right;
+            margin-left: 52%;
+            margin-top: 9%;
+    
+            .title {
+                font-weight: 900;
+                font-size: 3rem;
+        line-height: 3.5rem;
+                color: black;
+                font-family: initial;
+            }
+    
+            .paragraph {
+                margin-top: 1.25rem;
+                line-height: 2rem;
+        font-size: x-large;
+                font-family: auto;
+                padding-left: 10%;
+            }
+    
+            .button {
+                background-color: black;
+                margin: 25px 0;
+        padding: 10px 35px;
+        font-size: x-large;
+                font-family: auto;
+            }
+    
+            .button:hover {
+                background-color: white;
+                color: black;
+            }
+        }}
+    }
+    
+
+}
+
+@media only screen and (max-width: 1450px) {
+
+    #partners {
+        .bgimg {
+            background-image: url("../assets/sectionbg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 39rem;
+            padding: 2rem 4rem 1rem 2rem;
+        }
+    
+        .partners-upper-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 2rem 0 2rem;
+        
+        
+    
+        .partners-bottom-container {
+            padding-bottom: 4rem;
+            height: 100%;
+            text-align: right;
+            margin-top: 5rem;
+                margin-left: 69%;
+    
+            .title {
+                font-weight: 900;
+                font-size: 3.3rem;
+        line-height: 3rem;
+                color: black;
+                font-family: initial;
+            }
+    
+            .paragraph {
+                margin-top: 1.25rem;
+                line-height: 1.7rem;
+        font-size: x-large;
+                font-family: auto;
+                padding-left: 10%;
+            }
+    
+            .button {
+                background-color: black;
+                margin: 20px 0;
+        padding: 11px 23px;
+        font-size: large;
+                font-family: auto;
+            }
+    
+            .button:hover {
+                background-color: white;
+                color: black;
+            }
+        }}
+    }
+    
+      }
+    
+      @media only screen and (max-width: 1370px) {
+
+        #partners {
+            .bgimg {
+                background-image: url("../assets/sectionbg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 39rem;
+                padding: 2rem 4rem 1rem 2rem;
+            }
+        
+            .partners-upper-container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 2rem 0 2rem;
+            
+            
+        
+            .partners-bottom-container {
+                padding-bottom: 4rem;
+                height: 100%;
+                text-align: right;
+                margin-top: 5rem;
+                    margin-left: 69%;
+        
+                .title {
+                    font-weight: 900;
+                    font-size: 3.3rem;
+            line-height: 3rem;
+                    color: black;
+                    font-family: initial;
+                }
+        
+                .paragraph {
+                    margin-top: 1.25rem;
+                    line-height: 1.7rem;
+            font-size: x-large;
+                    font-family: auto;
+                    padding-left: 10%;
+                }
+        
+                .button {
+                    background-color: black;
+                    margin: 20px 0;
+            padding: 11px 23px;
+            font-size: large;
+                    font-family: auto;
+                }
+        
+                .button:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }}
+        }
+        
+          }
+        
+
+@media only screen and (max-width: 1030px) {
+    #partners {
+        .bgimg {
+            background-image: url("../assets/sectionbg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 23rem;
+            padding: 1rem 2rem 1rem 2rem;
+        }
+    
+        .partners-upper-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 2rem 0 2rem;
+            text-align: center;        
+        
+    
+        .partners-bottom-container {
+            padding-bottom: 4rem;
+            height: 100%;
+            text-align: right;
+            margin-top: 4rem;
+                margin-left: 68%;
+    
+            .title {
+                font-weight: 900;
+                font-size: 1.3rem;
+                     line-height: 1.3rem;
+                color: black;
+                font-family: initial;
+            }
+    
+            .paragraph {
+                margin-top: 1.25rem;
+                line-height: 1.2rem;
+                font-size: small;
+                font-family: auto;
+                padding-left: 10%;
+            }
+    
+            .button {
+                background-color: black;
+        margin: 13px 0;
+        padding: 5px 19px;
+        font-size: x-small;
+        font-family: auto;
+    
+            }
+    
+            .button:hover {
+                background-color: white;
+                color: black;
+            }
+        }}
+    }
+    
+   
+}
+
+@media only screen and (max-width: 770px) {
+    #partners {
+        .bgimg{    
+            height: 20rem;
+            padding: 0rem 1rem 1rem 2rem;
+        }
+        .partners-upper-container {
+            .partners-bottom-container {
+                .title {
+                    font-size: 1.5rem;
+        line-height: 1.3rem;
+                }
+                .paragraph {
+                    line-height: 1rem;
+        font-size: smaller;
+    
+                }
+                .button{
+                    margin: 11px 0;
+                    padding: 4px 15px;
+                    font-size: xx-small;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    #partners {
+        .bgimg{
+            height: 20rem;
+            padding: 0rem 0rem 1rem 2rem;
+        }
+        .partners-upper-container {
+            .partners-bottom-container {
+                margin-left: 70%;
+                .title {
+                    font-size: 1.2rem;
+                    line-height: 1rem;
+                }
+                .paragraph {
+                    font-size: x-small;
+                    line-height: 0.8rem;
+                }
+                .button{
+                    margin: 7px 0;
+        padding: 2px 10px;
+        font-size: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    #partners {
+        .bgimg{
+            height: 12rem;
+        padding: 0rem 0rem 1rem 2rem;
+        }
+        .partners-upper-container {
+            .partners-bottom-container {
+                margin-left: 59%;
+                margin-top: 13%;
+    
+                .title {
+                    font-size: 1rem;
+        line-height: 0.8;
+                }
+                .paragraph {
+                    font-size: 8px;
+        line-height: 0.7rem;
+        margin-top: 8px;
+    
+                }
+                .button{
+                    margin: 7px 0;
+        padding: 3px 10px;
+        font-size: 6px;
+    
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    #partners {
+        .bgimg{
+            height: 10rem;
+        padding: 0rem 0rem 1rem 2rem;
+        }
+        .partners-upper-container {
+            .partners-bottom-container {
+                .title {
+                    font-size: 15px;
+        line-height: 0.8rem;
+                }
+                .paragraph {
+                    font-size: 7px;
+        line-height: 0.6rem;
+        margin-top: 5px;
+    
+                }
+                .button{
+                    margin: 4px 0;
+        padding: 2px 8px;
+        font-size: 5px;
+    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+
+
+@media only screen and (max-width: 2600px) {
+.loginsec-container {
+    background-image: url('../assets/loginbg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px;
+  
+    .login-container {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+  
+      .login-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+  
+      .login-form {
+        display: flex;
+        flex-direction: column;
+  
+        .login-input {
+          padding: 12px 15px;
+          margin-bottom: 15px;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          font-size: 16px;
+          transition: 0.3s;
+  
+          &:focus {
+            outline: none;
+            border-color: #4caf50;
+          }
+        }
+  
+        .login-button {
+          padding: 12px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+  
+          &:hover {
+            background-color: #002c5a;
+          }
+        }
+  
+        p {
+          margin-top: 10px;
+          text-align: center;
+          font-size: 18px;
+  
+          a {
+            color: #007bff;
+            text-decoration: none;
+            margin-left: 5px;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+  
+        .error-text {
+          color: #e53935;
+          font-size: 14px;
+          margin-top: 10px;
+          text-align: center;
+        }
+  
+        .success-text {
+          color: #43a047;
+          font-size: 14px;
+          margin-top: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 2600px) {
+    .login-container {
+      max-width: 500px;
+      padding: 50px;
+  
+      .login-title {
+        font-size: 2.5rem;
+      }
+  
+      .login-input,
+      .login-button {
+        font-size: 18px;
+      }
+    }
+  }
+}  
