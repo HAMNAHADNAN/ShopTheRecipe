@@ -1,5 +1,6 @@
 
 
+
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -12,13 +13,14 @@ const RecipeDetail = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
+  const [message, setMessage] = useState(null);
+  const [messageType, setMessageType] = useState('');
 
   useEffect(() => {
-    // Fetch recipe data from backend
     const fetchRecipe = async () => {
       try {
         const response = await axios.get(`http://localhost:8081/recipes/${id}`);
-        setRecipe(response.data);  // Set recipe data from response
+        setRecipe(response.data);
       } catch (err) {
         setError('Error loading recipe');
         console.error(err);
@@ -29,6 +31,12 @@ const RecipeDetail = () => {
 
     fetchRecipe();
   }, [id]);
+
+  const showMessage = (text, type = 'success') => {
+    setMessage(text);
+    setMessageType(type);
+    setTimeout(() => setMessage(null), 4000); // Auto-hide after 4s
+  };
 
   const handleSelectAll = (e) => {
     if (e.target.checked) {
@@ -46,64 +54,43 @@ const RecipeDetail = () => {
     }
   };
 
-  // const handleBuyIngredients = () => {
-  //   // Add the selected ingredients to the cart (you can make an API call or handle the cart logic here)
-  //   console.log('Ingredients added to cart:', selectedIngredients);
-  // };
-
-
   const handleBuyIngredients = async () => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
     const userId = storedUser?.id;
-  
-    // Check if any ingredients are selected
+
     if (selectedIngredients.length === 0) {
-      alert("Please select at least one ingredient!");
+      showMessage("Please select at least one ingredient!", "error");
       return;
     }
-  
+
     try {
-      // Iterate through selected ingredients and add each one to the cart with quantity 1
       for (const ingredientName of selectedIngredients) {
-        console.log("ingredientName:", ingredientName); // <-- Log selected name
-        console.log("All ingredients:", recipes.ingredients); 
         const ingredient = recipes.ingredients.find(
           (ingredient) => ingredient.name === ingredientName
         );
-        
-  
+
         if (ingredient) {
           const payload = {
-            user_id: userId, 
+            user_id: userId,
             ingredient_id: ingredient.id,
             quantity: 1
           };
-  
-          console.log("Sending data to backend:", payload);  // Log the data being sent
-  
-          const response = await axios.post('http://localhost:8081/cart', payload);
-  
-          console.log(response.data.message); // Log success or failure
+
+          await axios.post('http://localhost:8081/cart', payload);
         }
       }
-  
-      alert("Ingredients added to cart!");
+
+      showMessage("Ingredients added to cart!", "success");
     } catch (err) {
       console.error("Error adding ingredients to cart:", err);
-  
+
       if (err.response) {
-        console.error("Error Response Data:", err.response.data);
-        alert(`Failed to add ingredients to cart. Server Response: ${err.response.data.message}`);
+        showMessage(`Failed to add ingredients to cart. ${err.response.data.message}`, "error");
       } else {
-        alert("Failed to add ingredients to cart.");
+        showMessage("Failed to add ingredients to cart.", "error");
       }
     }
   };
-  
-  
-  
-  
-  
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
@@ -112,9 +99,11 @@ const RecipeDetail = () => {
   return (
     <div className="recipe-detail-container">
       <button className="back-btn" onClick={() => navigate(-1)}>← Back</button>
-<h1 style={{ textAlign: 'center', fontSize: '32px', margin: '20px 0', color: 'navy' }}>
-  <strong>{recipes.title}</strong>
-</h1>    
+      
+      <h1 style={{ textAlign: 'center', fontSize: '32px', margin: '20px 0', color: 'navy' }}>
+        <strong>{recipes.title}</strong>
+      </h1>    
+
       <img src={recipes.image_url} alt={recipes.title} className="detail-img" />
 
       <div className="metadata">
@@ -129,7 +118,6 @@ const RecipeDetail = () => {
 
       <h2><strong>Ingredients</strong></h2>
       <ul className="ingredients-list">
-        
         {recipes.ingredients && recipes.ingredients.length > 0 ? (
           recipes.ingredients.map((item, idx) => (
             <li key={idx}>
@@ -139,14 +127,16 @@ const RecipeDetail = () => {
                 checked={selectedIngredients.includes(item.name)}
                 onChange={(e) => handleIngredientChange(item, e)}
               />
-              <label htmlFor={`ingredient-${idx}`}>{item.name} {item.quantity} - $ {item.price}</label>
+              <label htmlFor={`ingredient-${idx}`}>
+                {item.name} {item.quantity} - $ {item.price}
+              </label>
             </li>
           ))
         ) : (
           <li>No ingredients available.</li>
         )}
 
-<li>
+        <li>
           <input
             type="checkbox"
             onChange={handleSelectAll}
@@ -158,6 +148,17 @@ const RecipeDetail = () => {
 
       <button className="buy-btn" onClick={handleBuyIngredients}>🛒 Add To Cart</button>
 
+      {/* Display success or error message */}
+      {message && (
+        <div className={`mt-4 p-3 rounded text-sm border w-fit ${
+          messageType === 'success'
+            ? 'bg-green-100 text-green-700 border-green-300'
+            : 'bg-red-100 text-red-700 border-red-300'
+        }`}>
+          {message}
+        </div>
+      )}
+
       <h2>Instructions</h2>
       <p>{recipes.instructions}</p>
     </div>
@@ -165,4 +166,3 @@ const RecipeDetail = () => {
 };
 
 export default RecipeDetail;
-

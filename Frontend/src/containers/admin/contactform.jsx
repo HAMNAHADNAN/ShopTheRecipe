@@ -10,6 +10,9 @@ const AdminContactForm = () => {
     category: '',
     message: ''
   });
+  const [message, setMessage] = useState(null);
+  const [messageType, setMessageType] = useState('');
+  const [deleteConfirmId, setDeleteConfirmId] = useState(null); // new
 
   const cellStyle = {
     border: '1px solid #ccc',
@@ -25,7 +28,13 @@ const AdminContactForm = () => {
   const fetchContactSubmissions = () => {
     axios.get('http://localhost:8081/api/contact-submissions')
       .then(res => setContactSubmissions(res.data))
-      .catch(err => console.error('Error fetching contact submissions:', err));
+      .catch(() => showMessage('Failed to load contact submissions.', 'error'));
+  };
+
+  const showMessage = (text, type = 'success') => {
+    setMessage(text);
+    setMessageType(type);
+    setTimeout(() => setMessage(null), 4000);
   };
 
   const handleEditChange = (e) => {
@@ -52,21 +61,29 @@ const AdminContactForm = () => {
       .then(() => {
         setEditingId(null);
         fetchContactSubmissions();
+        showMessage('Contact submission updated successfully.', 'success');
       })
-      .catch(err => alert('Failed to update contact submission'));
+      .catch(() => showMessage('Failed to update contact submission.', 'error'));
   };
 
-  const handleDelete = (id) => {
-    if (window.confirm('Are you sure you want to delete this contact submission?')) {
-      axios.delete(`http://localhost:8081/api/contact-submissions/${id}`)
-        .then(() => fetchContactSubmissions())
-        .catch(err => alert('Failed to delete contact submission'));
-    }
+  const handleDeleteConfirm = (id) => {
+    axios.delete(`http://localhost:8081/api/contact-submissions/${id}`)
+      .then(() => {
+        fetchContactSubmissions();
+        setDeleteConfirmId(null);
+        showMessage('Contact submission deleted successfully.', 'success');
+      })
+      .catch(() => {
+        showMessage('Failed to delete contact submission.', 'error');
+        setDeleteConfirmId(null);
+      });
   };
 
   return (
     <div style={{ padding: '40px', maxWidth: '99%', margin: '0 auto' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '30px', fontSize: '40px', color: 'navy' }}>Contact Form Submissions</h1>
+      <h1 style={{ textAlign: 'center', marginBottom: '30px', fontSize: '40px', color: 'navy' }}>
+        Contact Form Submissions
+      </h1>
 
       <table style={{
         width: '100%',
@@ -95,18 +112,10 @@ const AdminContactForm = () => {
             <tr key={submission.id} style={{ backgroundColor: idx % 2 === 0 ? '#fff' : '#f9f9f9' }}>
               {editingId === submission.id ? (
                 <>
-                  <td style={cellStyle}>
-                    <input name="name" value={editData.name} onChange={handleEditChange} />
-                  </td>
-                  <td style={cellStyle}>
-                    <input name="email" value={editData.email} onChange={handleEditChange} />
-                  </td>
-                  <td style={cellStyle}>
-                    <input name="category" value={editData.category} onChange={handleEditChange} />
-                  </td>
-                  <td style={cellStyle}>
-                    <textarea name="message" value={editData.message} onChange={handleEditChange}></textarea>
-                  </td>
+                  <td style={cellStyle}><input name="name" value={editData.name} onChange={handleEditChange} /></td>
+                  <td style={cellStyle}><input name="email" value={editData.email} onChange={handleEditChange} /></td>
+                  <td style={cellStyle}><input name="category" value={editData.category} onChange={handleEditChange} /></td>
+                  <td style={cellStyle}><textarea name="message" value={editData.message} onChange={handleEditChange}></textarea></td>
                   <td style={cellStyle}>{submission.submitted_at}</td>
                   <td style={cellStyle}>
                     <button onClick={() => handleUpdate(submission.id)}>Save</button>
@@ -121,8 +130,46 @@ const AdminContactForm = () => {
                   <td style={cellStyle}>{submission.message}</td>
                   <td style={cellStyle}>{submission.submitted_at}</td>
                   <td style={cellStyle}>
-                    <button onClick={() => handleEditClick(submission)}>Edit</button>
-                    <button onClick={() => handleDelete(submission.id)} style={{ marginLeft: '10px' }}>Delete</button>
+                    {deleteConfirmId === submission.id ? (
+                      <>
+                        <span style={{ marginRight: '10px', color: '#d9534f', fontWeight: 'bold' }}>Confirm delete?</span>
+                        <button
+                          onClick={() => handleDeleteConfirm(submission.id)}
+                          style={{
+                            backgroundColor: '#d9534f',
+                            color: 'white',
+                            border: 'none',
+                            padding: '5px 10px',
+                            borderRadius: '4px',
+                            marginRight: '5px'
+                          }}
+                        >
+                          Yes
+                        </button>
+                        <button
+                          onClick={() => setDeleteConfirmId(null)}
+                          style={{
+                            backgroundColor: '#5bc0de',
+                            color: 'white',
+                            border: 'none',
+                            padding: '5px 10px',
+                            borderRadius: '4px'
+                          }}
+                        >
+                          No
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <button onClick={() => handleEditClick(submission)}>Edit</button>
+                        <button
+                          onClick={() => setDeleteConfirmId(submission.id)}
+                          style={{ marginLeft: '10px', color: 'red', border: 'none', padding: '5px 10px', borderRadius: '4px' }}
+                        >
+                          Delete
+                        </button>
+                      </>
+                    )}
                   </td>
                 </>
               )}
@@ -130,6 +177,22 @@ const AdminContactForm = () => {
           ))}
         </tbody>
       </table>
+
+      {/* Feedback Message */}
+      {message && (
+        <div style={{
+          marginTop: '20px',
+          padding: '12px 20px',
+          borderRadius: '6px',
+          maxWidth: '400px',
+          fontWeight: 'bold',
+          backgroundColor: messageType === 'success' ? '#d4edda' : '#f8d7da',
+          color: messageType === 'success' ? '#155724' : '#721c24',
+          border: `1px solid ${messageType === 'success' ? '#c3e6cb' : '#f5c6cb'}`
+        }}>
+          {message}
+        </div>
+      )}
     </div>
   );
 };

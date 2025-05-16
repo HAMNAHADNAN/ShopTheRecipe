@@ -1024,7 +1024,7 @@ app.get('/orders/:userId', (req, res) => {
       i.name AS ingredient_name,
       i.unit,
       oi.quantity,
-      oi.price,
+      i.price AS price,
       'Shipped' AS status
     FROM orders o
     JOIN order_items oi ON o.id = oi.order_id
@@ -1058,19 +1058,7 @@ app.delete('/orders/:orderId', async (req, res) => {
   }
 });
 
-// const fetchSearchResults = async (query) => {
-//   setLoading(true);
-//   try {
-//     const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
-//     const data = await response.json();
-//     console.log('API response:', data); // Log API response for debugging
-//     setResults(data);
-//   } catch (error) {
-//     console.error('Error fetching search results:', error);
-//   } finally {
-//     setLoading(false);
-//   }
-// };
+
 
 app.get('/api/search', (req, res) => {
   const query = req.query.q; // Extract the query parameter
